@@ -1,4 +1,5 @@
 #! /bin/bash
+declare -a array
 declare -A dictonary
 key=0
 value=0
@@ -19,3 +20,14 @@ echo $mod
 echo "dictonary['${key}']=['${mod}']"
 
 echo ${!dictonary[@]}
+
+for dictonary in ${array[@]}
+do
+	echo $array
+done
+echo ${!array[@]}
+for index in ${!array[@]}
+do
+	echo "index" $index "element" ${array[$index]}
+done
+echo ${#array[@]}
